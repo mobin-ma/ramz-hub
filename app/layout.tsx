@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local'
 import Providers from "@/store/Providers";
+import AuthGuard from "@/components/auth/AuthGuard";
 
 const iranSans = localFont({
   src: '../fonts/IRANSansWeb_Medium.woff2'
@@ -23,7 +24,9 @@ export default function RootLayout({
         className={`${iranSans.className} antialiased bg-background overflow-hidden h-screen flex flex-col font-display`}
       >
         <Providers>
-          {children}
+          <AuthGuard>
+            {children}
+          </AuthGuard>
         </Providers>
       </body>
     </html>

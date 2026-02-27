@@ -5,16 +5,10 @@ export const metadata: Metadata = {
     description: "Auth layout"
 }
 
-export default function layout({
+export default function AuthLayout({
     children,
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    return (
-        <html lang="fa" dir="rtl">
-            <body className=''>
-                {children}
-            </body>
-        </html>
-    )
+    return <>{children}</>
 }

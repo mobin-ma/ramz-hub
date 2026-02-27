@@ -14,20 +14,18 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body>
-        {/* HEADER */}
-        <Header />
+    <>
+      {/* HEADER */}
+      <Header />
 
-        <div className="flex flex-1 overflow-hidden">
-          {/* SIDEBAR */}
-          <Sidebar />
-          {children}
-        </div>
+      <div className="flex flex-1 overflow-hidden">
+        {/* SIDEBAR */}
+        <Sidebar />
+        {children}
+      </div>
 
-        {/* MOBILE SIDEBAR */}
-        <MobileSidebar />
-      </body>
-    </html>
+      {/* MOBILE SIDEBAR */}
+      <MobileSidebar />
+    </>
   );
 }

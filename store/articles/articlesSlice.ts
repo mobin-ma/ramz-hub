@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchArticles } from "./articlesThunk";
-import { NewsArticle } from "@/types/articles";
+import { NewsArticle } from "@/types/articlesTypings";
 
 interface ArticlesState {
   articles: NewsArticle[];

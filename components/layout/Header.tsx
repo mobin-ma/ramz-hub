@@ -1,5 +1,6 @@
 import { IoMdSearch } from "react-icons/io"; 
 import { MdNotificationsNone } from "react-icons/md";
+import UserProfile from "@/components/auth/UserProfile";
 
 
 function Header() {
@@ -13,9 +14,12 @@ function Header() {
             <IoMdSearch className="group-focus-within:text-primary text-xl" />
             <input className="flex w-full flex-1 resize-none overflow-hidden text-white focus:outline-0 bg-transparent placeholder:text-text-secondary px-3 text-sm font-normal leading-normal" type="search" placeholder="جستجوی تیکت‌ها، منابع خبری..." />
         </div>
-        <div className="relative">
-            <MdNotificationsNone className="text-3xl font-bold"/>
-            <div className="w-1 h-1 bg-primary absolute top-1 right-1"></div>
+        <div className="flex items-center gap-4">
+            <div className="relative">
+                <MdNotificationsNone className="text-3xl font-bold"/>
+                <div className="w-1 h-1 bg-primary absolute top-1 right-1"></div>
+            </div>
+            <UserProfile />
         </div>
     </div>
   )

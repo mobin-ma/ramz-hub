@@ -1,5 +1,6 @@
 import { MdExpandMore, MdOpenInNew, MdOutlineAccountBalance, MdOutlineAutoAwesome, MdSentimentVerySatisfied } from "react-icons/md"
-import { NewsArticle } from "@/types/articles";
+import { NewsArticle } from "@/types/articlesTypings";
+import ProtectedContent from "@/components/auth/ProtectedContent";
 
 interface ArticleProp {
     article: NewsArticle;
@@ -89,41 +90,47 @@ function ArticleCard({ article }: ArticleProp) {
                                     </span>
                                     خلاصه هوش مصنوعی
                                 </h4>
-                                <ul className="list-disc list-inside space-y-2 text-sm text-gray-300 marker:text-primary">
-                                    <li>
-                                        تصویب SEC نقطه عطفی برای تنظیم مقررات ارزهای دیجیتال است.
-                                    </li>
-                                    <li>
-                                        صندوق بیت‌کوین iShares متعلق به شرکت BlackRock اولین صندوق مورد تایید است.
-                                    </li>
-                                    <li>
-                                        انتظار می‌رود میلیاردها دلار سرمایه نهادی را آزاد کند.
-                                    </li>
-                                    <li>کوین‌بیس به عنوان متولی این امانت انتخاب شد.</li>
-                                </ul>
+                                <ProtectedContent>
+                                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-300 marker:text-primary">
+                                        <li>
+                                            تصویب SEC نقطه عطفی برای تنظیم مقررات ارزهای دیجیتال است.
+                                        </li>
+                                        <li>
+                                            صندوق بیت‌کوین iShares متعلق به شرکت BlackRock اولین صندوق مورد تایید است.
+                                        </li>
+                                        <li>
+                                            انتظار می‌رود میلیاردها دلار سرمایه نهادی را آزاد کند.
+                                        </li>
+                                        <li>کوین‌بیس به عنوان متولی این امانت انتخاب شد.</li>
+                                    </ul>
+                                </ProtectedContent>
                             </div>
                             <div className="space-y-4">
                                 <div className="bg-background/50 rounded-2xl p-4 border border-border/30">
                                     <h4 className="text-xs font-bold text-text-secondary uppercase tracking-wider mb-2">
                                         تأثیر بازار
                                     </h4>
-                                    <p className="text-sm text-white leading-relaxed">
-                                        افزایش فوری قیمت بیت‌کوین به بالای ۴۶ هزار دلار. آلت‌کوین‌های با همبستگی بالا (ETH، SOL) نیز شاهد افزایش دو رقمی هستند. انتظار می‌رود نوسانات زیادی در ۲۴ ساعت آینده وجود داشته باشد.
-                                    </p>
+                                    <ProtectedContent>
+                                        <p className="text-sm text-white leading-relaxed">
+                                            افزایش فوری قیمت بیت‌کوین به بالای ۴۶ هزار دلار. آلت‌کوین‌های با همبستگی بالا (ETH، SOL) نیز شاهد افزایش دو رقمی هستند. انتظار می‌رود نوسانات زیادی در ۲۴ ساعت آینده وجود داشته باشد.
+                                        </p>
+                                    </ProtectedContent>
                                 </div>
                                 <div className="bg-bullish/5 rounded-2xl p-4 border border-bullish/20">
                                     <h4 className="text-xs font-bold text-bullish uppercase tracking-wider mb-1">
                                         نکته کلیدی
                                     </h4>
-                                    <p className="text-sm text-white font-medium">
-                                        دریچه‌های نهادی رسماً باز شده‌اند.
-                                    </p>
+                                    <ProtectedContent>
+                                        <p className="text-sm text-white font-medium">
+                                            دریچه‌های نهادی رسماً باز شده‌اند.
+                                        </p>
+                                    </ProtectedContent>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-wrap items-center gap-2 pt-2">
                             {
-                                article.tags.map((tag,i) => (
+                                article.tags.map((tag, i) => (
                                     <span key={i} className="text-[10px] font-medium px-3 py-1 rounded-full bg-surface text-text-secondary border border-border hover:border-primary/50 transition-colors cursor-pointer">#{tag}</span>
                                 ))
                             }

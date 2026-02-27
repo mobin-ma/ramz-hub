@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { getArticlesService } from "@/services/articles.service";
-import { ArticlesResponse } from "@/types/articles";
+import { ArticlesResponse } from "@/types/articlesTypings";
 
 export const fetchArticles = createAsyncThunk<
   ArticlesResponse,
