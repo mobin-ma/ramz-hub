@@ -28,11 +28,11 @@ export default function ProtectedContent({ children, blur = true }: ProtectedCon
       {/* پوشش با دکمه ورود */}
       <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm">
         <div className="text-center space-y-4 p-6">
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold text-white mb-2">
               محتوای ویژه کاربران
             </h3>
-          </div>
+          </div> */}
           <button
             onClick={() => router.push('/auth')}
             className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-medium transition-colors"
