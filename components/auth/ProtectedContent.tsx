@@ -26,7 +26,7 @@ export default function ProtectedContent({ children, blur = true }: ProtectedCon
       </div>
 
       {/* پوشش با دکمه ورود */}
-      <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center space-y-4 p-6">
           {/* <div>
             <h3 className="text-lg font-semibold text-white mb-2">
